@@ -1,0 +1,320 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: white;
+  background-color: rgb(30, 32, 43);
+}
+
+.home-body {
+  background-image: url("image/icon.png");
+  background-position: center top;
+  background-size: cover;
+  height: 345px;
+  position: relative;
+  z-index: 1;
+  padding-top: 20px;
+}
+
+.card-group {
+  margin-top: -145px;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 991.98px) {
+  .card-group > [class*="col-"] {
+    width: 100%;
+  }
+}
+
+.navbar {
+  background-color: rgb(30, 32, 43);
+  padding: 55px 0;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand,
+.navbar .site-description {
+  font-size: 16px;
+  color: white !important;
+}
+
+.navbar-nav .nav-link {
+  padding: 8px 14px;
+  margin-left: 10px;
+  border-radius: 999px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: rgb(1, 154, 216) !important;
+  border-color: rgb(1, 154, 216) !important;
+  background-color: transparent !important;
+}
+
+.navbar-toggler {
+  background-color: transparent;
+  border: none;
+  color: white !important;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.navbar-toggler:hover {
+  color: rgb(1, 154, 216) !important;
+  border: 2px solid rgb(1, 154, 216) !important;
+}
+
+.navbar-toggler:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: rgb(38, 41, 54);
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    width: 100%;
+    border-bottom: 1px solid gray;
+  }
+
+  .navbar-nav .nav-item:last-child {
+    border-bottom: none;
+  }
+
+  .navbar-nav .nav-link {
+    width: 100%;
+    border-radius: 0;
+    padding: 15px 20px;
+    border: none !important;
+  }
+
+  .navbar-nav .nav-link.active {
+    color: rgb(1, 154, 216) !important;
+    background-color: transparent !important;
+    border: none !important;
+  }
+}
+
+.search-wrapper {
+  position: relative;
+}
+
+.search-input-header,
+.search-input {
+  width: 100%;
+  padding: 12px 140px 12px 20px;
+  background-color: rgb(30, 32, 43);
+  color: white !important;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  box-shadow: none !important;
+}
+
+.search-input-header {
+  margin-top: -250px;
+}
+
+.search-input-header::placeholder,
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.search-btn {
+  position: absolute;
+  top: 50%;
+  right: .5%;
+  transform: translateY(-50%);
+  background-color: rgb(1, 154, 216);
+  color: white;
+  border: none;
+  padding: 8px 40px;
+  border-radius: 20px;
+}
+
+#subscribe-btn {
+  padding: 10px 16px;
+  font-size: 14px;
+}
+
+.search-btn:hover {
+  background-color: rgb(1, 154, 216);
+  color: white;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  background-color: rgb(30, 32, 43) !important;
+  color: white !important;
+}
+
+.card {
+  margin: 0;
+  min-height: 300px;
+  position: relative;
+  z-index: 10;
+}
+
+.card-one {
+  background-color: #323544 !important;
+  border-bottom-left-radius: 20px !important;
+  border-top-left-radius: 20px !important;
+}
+.card-one .card-footer {
+  background-color: rgb(45, 48, 61);
+  border-top-left-radius: 20px !important;
+}
+
+.card-two {
+  background-color: rgb(38, 41, 54);
+}
+.card-two .card-footer {
+  background-color: rgb(34, 37, 48);
+}
+
+.card-three {
+  background-color: rgb(50, 53, 68);
+  border-top-right-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+}
+.card-three .card-footer {
+  background-color: #2D303D!important;
+  border-top-right-radius: 20px !important;
+}
+
+@media (max-width: 991.98px) {
+  .card-one {
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+    border-bottom-left-radius: 0 !important;
+  }
+
+  .card-one .card-footer {
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+  }
+
+  .card-three {
+    border-bottom-left-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+    border-top-right-radius: 0 !important;
+  }
+
+  .card-three .card-footer {
+    border: none !important;
+    border-top-right-radius: 0 !important;
+  }
+}
+
+.city-name {
+  font-size: 14px;
+  color: rgb(191, 193, 200);
+}
+
+.max-temp {
+  font-size: 32px;
+  color: #f5f5f5;
+}
+
+.min-temp {
+  font-size: 18px;
+  color: rgb(191, 193, 200);
+}
+
+.condition-text {
+  font-size: 14px;
+  color: #01aad4 !important;
+}
+
+.card-footer .day-name,
+.card-footer .day-date {
+  color: rgb(191, 193, 200) !important;
+}
+
+.site-footer {
+  background-color: rgb(38, 41, 54);
+  padding: 30px 0;
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+}
+
+.site-footer .social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(30, 32, 43);
+  color: rgb(1, 154, 216);
+  border-radius: 50%;
+  font-size: 20px;
+  width: 45px;
+  height: 45px;
+  margin: 0 1px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+
+.site-footer .social-links a:hover {
+  background-color: rgb(1, 154, 216);
+  color: white;
+  border: 2px solid rgb(1, 154, 216);
+}
+
+.site-footer .colophon {
+  font-size: 14px;
+  color: rgb(191, 193, 200);
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .site-footer .row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .site-footer .col-md-8,
+  .site-footer .col-md-3 {
+    width: 100%;
+    text-align: left;
+  }
+
+  .site-footer .colophon {
+    text-align: left;
+    margin-top: 15px;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .site-footer .social-links {
+    justify-content: flex-start !important;
+    margin-bottom: 15px;
+  }
+}
+
+.forecast-icon {
+  width: 64px !important;
+  height: 64px;
+}
+
+#main-icon {
+  width: 80px !important;
+  height: 80px;
+}
+
+.card-one #main-temp {
+  font-size: 5rem;
+}

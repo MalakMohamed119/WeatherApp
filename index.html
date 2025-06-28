@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="d-flex flex-column">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="css/image/cloud.png" alt="Logo" width="40" height="30" class="me-2" />
+        <div class="d-flex flex-column">
+          <strong class="m-0">Weather</strong>
+          <small class="text-secondary">tagline goes here</small>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <i class="fa fa-bars toggler-icon"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Live Cameras</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Photos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Background section 1 -->
+  <div class="home-body text-center d-flex flex-column justify-content-end">
+    <form class="find-location mb-4">
+      <div class="search-wrapper mx-auto" style="max-width: 1000px; position: relative;">
+        <input type="text" id="search" class="form-control search-input-header" placeholder="Find your location..." autocomplete="off" />
+        <button type="button" id="submit" class="search-btn">Find</button>
+      </div>
+    </form>
+  </div>
+
+<!-- Cards -->
+<div class="container">
+  <div class="row g-0 card-group">
+    
+    <!-- Card 1 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card card-one text-white h-100">
+        <div class="card-footer d-flex justify-content-between text-muted">
+          <small class="day-name">Monday</small>
+          <small class="day-date">28 Jun</small>
+        </div>
+        <div class="card-body position-relative text-start ps-4">
+          <h6 class="city-name position-absolute top-0 start-0 m-2">Cairo</h6>
+          <div class="d-flex align-items-start mt-5">
+            <h1 class="display-3 fw-bold me-3" id="main-temp">35°C</h1>
+            <img id="main-icon" src="" alt="icon" style="width: 64px;" />
+          </div>
+          <p class="text-primary condition-text">Partly Cloudy</p>
+          <div class="row mt-3">
+            <div class="col-4"><i class="fa-solid fa-umbrella"></i> <span id="rain">20%</span></div>
+            <div class="col-4"><i class="fa-solid fa-wind"></i> <span id="wind">18 km/h</span></div>
+            <div class="col-4"><i class="fa-solid fa-compass"></i> <span id="direction">East</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card card-two text-white text-center h-100 rounded-0">
+        <div class="card-footer text-muted">
+          <small class="day-name">Tuesday</small>
+        </div>
+        <div class="card-body">
+          <img class="forecast-icon mb-2" src="" alt="icon" style="width: 48px;" />
+          <h3 class="fw-bold max-temp">36°C</h3>
+          <h5 class="min-temp">24°C</h5>
+          <p class="text-primary condition-text">Sunny</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card card-three text-white text-center h-100">
+        <div class="card-footer text-muted">
+          <small class="day-name">Wednesday</small>
+        </div>
+        <div class="card-body">
+          <img class="forecast-icon mb-2" src="" alt="icon" style="width: 48px;" />
+          <h3 class="fw-bold max-temp">34°C</h3>
+          <h5 class="min-temp">22°C</h5>
+          <p class="text-primary condition-text">Partly Cloudy</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row text-center text-md-start align-items-center">
+        <div class="col-md-8 mb-3 mb-md-0">
+          <form class="find mb-2">
+            <div class="search-wrapper mx-auto mx-md-0" style="max-width: 600px; position: relative;">
+              <input type="email" id="subscribe-email" class="form-control search-input" placeholder="Enter your Email to subscribe..." autocomplete="off" />
+              <button type="button" id="subscribe-btn" class="search-btn">Subscribe</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-4 d-flex justify-content-md-end gap-3 social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <p class="colophon mb-0 small text-start">© 2025 Company name. Designed by You. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
