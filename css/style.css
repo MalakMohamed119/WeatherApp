@@ -22,6 +22,7 @@ body {
   position: relative;
   z-index: 2;
 }
+
 @media (max-width: 991.98px) {
   .card-group > [class*="col-"] {
     width: 100%;
@@ -63,6 +64,7 @@ body {
   border-radius: 50%;
   transition: all 0.3s ease;
 }
+
 .navbar-toggler:hover {
   color: rgb(1, 154, 216) !important;
   border: 2px solid rgb(1, 154, 216) !important;
@@ -171,6 +173,7 @@ button:focus {
   border-bottom-left-radius: 20px !important;
   border-top-left-radius: 20px !important;
 }
+
 .card-one .card-footer {
   background-color: rgb(45, 48, 61);
   border-top-left-radius: 20px !important;
@@ -179,6 +182,7 @@ button:focus {
 .card-two {
   background-color: rgb(38, 41, 54);
 }
+
 .card-two .card-footer {
   background-color: rgb(34, 37, 48);
 }
@@ -188,8 +192,9 @@ button:focus {
   border-top-right-radius: 20px !important;
   border-bottom-right-radius: 20px !important;
 }
+
 .card-three .card-footer {
-  background-color: #2D303D!important;
+  background-color: #2D303D !important;
   border-top-right-radius: 20px !important;
 }
 
@@ -305,16 +310,14 @@ button:focus {
   }
 }
 
-.forecast-icon {
+
+
+.forecast-icon,
+.main-icon {
   width: 64px !important;
   height: 64px;
 }
 
-#main-icon {
-  width: 80px !important;
-  height: 80px;
-}
-
-.card-one #main-temp {
+.card-one .main-temp {
   font-size: 5rem;
 }

@@ -74,17 +74,18 @@ function updateWeatherCards(data) {
         : `https:${data.current.condition.icon}`;
 
       card.querySelector(".city-name").textContent = locationName;
-      card.querySelector("#main-temp").textContent = `${day.day.avgtemp_c}°C`;
-      card.querySelector("#main-icon").src = mainIcon;
-      card.querySelector("#main-icon").alt = data.current.condition.text;
+      card.querySelector(".main-temp").textContent = `${day.day.avgtemp_c}°C`;
+      const icon = card.querySelector(".main-icon");
+      icon.src = mainIcon;
+      icon.alt = data.current.condition.text;
 
-      const tempContainer = card.querySelector("#main-temp").parentElement;
+      const tempContainer = card.querySelector(".main-temp").parentElement;
       tempContainer.classList.add("d-flex", "flex-column", "align-items-start");
 
       card.querySelector(".condition-text").textContent = day.day.condition.text;
-      card.querySelector("#rain").textContent = `${day.day.daily_chance_of_rain}%`;
-      card.querySelector("#wind").textContent = `${day.day.maxwind_kph} km/h`;
-      card.querySelector("#direction").textContent = day.hour[12].wind_dir;
+      card.querySelector(".rain").textContent = `${day.day.daily_chance_of_rain}%`;
+      card.querySelector(".wind").textContent = `${day.day.maxwind_kph} km/h`;
+      card.querySelector(".direction").textContent = day.hour[12].wind_dir;
     } else {
       footer.innerHTML = `<small class="day-name">${weekday}</small>`;
       footer.classList.remove("d-flex", "justify-content-between");
