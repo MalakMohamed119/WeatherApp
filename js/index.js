@@ -1,9 +1,7 @@
 let debounceTimer;
+
 window.addEventListener("DOMContentLoaded", () => {
-  const savedData = localStorage.getItem("lastWeather");
-  if (savedData) {
-    updateWeatherCards(JSON.parse(savedData));
-  }
+  getWeather("Cairo"); 
 });
 
 document.getElementById("search").addEventListener("input", function () {
@@ -44,7 +42,6 @@ async function getWeather(location) {
 
     const data = await response.json();
     updateWeatherCards(data);
-    localStorage.setItem("lastWeather", JSON.stringify(data));
   } catch (error) {
     console.error(error.message);
   }
@@ -72,11 +69,13 @@ function updateWeatherCards(data) {
         <small class="day-date">${formattedDate}</small>`;
       footer.classList.add("d-flex", "justify-content-between");
 
-      const mainIcon = data.current.condition.icon;
+      const mainIcon = data.current.condition.icon.startsWith("http")
+        ? data.current.condition.icon
+        : `https:${data.current.condition.icon}`;
 
       card.querySelector(".city-name").textContent = locationName;
       card.querySelector("#main-temp").textContent = `${day.day.avgtemp_c}°C`;
-      card.querySelector("#main-icon").src = `https:${mainIcon}`;
+      card.querySelector("#main-icon").src = mainIcon;
       card.querySelector("#main-icon").alt = data.current.condition.text;
 
       const tempContainer = card.querySelector("#main-temp").parentElement;
@@ -90,7 +89,13 @@ function updateWeatherCards(data) {
       footer.innerHTML = `<small class="day-name">${weekday}</small>`;
       footer.classList.remove("d-flex", "justify-content-between");
 
-      card.querySelector(".forecast-icon").src = `https:${day.day.condition.icon}`;
+      const forecastIcon = day.day.condition.icon.startsWith("http")
+        ? day.day.condition.icon
+        : `https:${day.day.condition.icon}`;
+
+      const forecastImg = card.querySelector(".forecast-icon");
+      if (forecastImg) forecastImg.src = forecastIcon;
+
       card.querySelector(".max-temp").textContent = `${day.day.maxtemp_c}°C`;
       card.querySelector(".min-temp").textContent = `${day.day.mintemp_c}°C`;
       card.querySelector(".condition-text").textContent = day.day.condition.text;
